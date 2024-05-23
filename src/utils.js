@@ -78,6 +78,8 @@ export async function paginationLoop(startingPageUrl) {
     }
   }
 
+  console.log({ all_links_to_scrape: allLinks });
+
   return allLinks;
 }
 
@@ -121,6 +123,8 @@ export async function getTableData(link) {
     const company = getTableRow(row);
     tableData.push(company);
   });
+
+  console.log({ table_scraped: tableData });
 
   return tableData;
 }
